@@ -33,6 +33,10 @@ app.use(function(req, res) {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
+// app.listen(port, () => {
+//     console.log(`Listening on port ${port}`);
+// });
+
+http.createServer(app).listen(app.get('port'), function() {
+    console.log('Express server listening on port ' + app.get('port'));
 });
