@@ -2,6 +2,8 @@ var CT = require('./modules/country-list');
 var AM = require('./modules/account-manager');
 var EM = require('./modules/email-dispatcher');
 
+const path = require('path');
+
 module.exports = function(app) {
 
     // main login page //
