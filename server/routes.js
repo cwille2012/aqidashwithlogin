@@ -16,7 +16,8 @@ module.exports = function(app) {
             AM.autoLogin(req.cookies.user, req.cookies.pass, function(o) {
                 if (o != null) {
                     req.session.user = o;
-                    res.redirect('/control');
+                    //res.redirect('/control');
+                    res.sendFile(path.join(__dirname, '/../dash.html'));
                 } else {
                     res.sendFile(path.join(__dirname, '/../login.html'));
                 }
@@ -60,7 +61,8 @@ module.exports = function(app) {
             res.redirect('/');
         } else {
             //res.sendFile(path.join(__dirname, '/../dash.html'));
-            res.redirect('/control');
+            //res.redirect('/control');
+            res.sendFile(path.join(__dirname, '/../dash.html'));
         }
     });
 
