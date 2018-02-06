@@ -31,7 +31,7 @@
         "jquery": "3.3.0",
         "jquery.easing": "^1.4.1",
         "luma.gl": "^4.0.1",
-        "mongodb": "^3.0.1",
+        "mongodb": "^2.2.33",
         "moment": "^2.10.3",
         "node-redis-pubsub": "^2.0.0",
         "npm": "^5.6.0",
