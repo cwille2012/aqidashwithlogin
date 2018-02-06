@@ -42,7 +42,7 @@ app.use(session({
     store: new MongoStore({ url: dbURL })
 }));
 
-require('server/routes.js')(app);
+require(path.join(__dirname, '/server/routes.js'))(app);
 
 // console.log('**ready**');
 
