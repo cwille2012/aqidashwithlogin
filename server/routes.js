@@ -10,15 +10,15 @@ module.exports = function(app) {
     app.get('/', function(req, res) {
         // check if the user's credentials are saved in a cookie //
         if (req.cookies.user == undefined || req.cookies.pass == undefined) {
-            res.sendFile(path.join(__dirname, '/../login.html'));
+            res.sendFile(path.join(__dirname, '/../login'));
         } else {
             // attempt automatic login //
             AM.autoLogin(req.cookies.user, req.cookies.pass, function(o) {
                 if (o != null) {
                     req.session.user = o;
-                    res.sendFile(path.join(__dirname, '/../index.html'));
+                    res.sendFile(path.join(__dirname, '/../index'));
                 } else {
-                    res.sendFile(path.join(__dirname, '/../login.html'));
+                    res.sendFile(path.join(__dirname, '/../login'));
                 }
             });
         }
@@ -59,7 +59,7 @@ module.exports = function(app) {
             // if user is not logged-in redirect back to login page //
             res.redirect('/');
         } else {
-            res.sendFile(path.join(__dirname, '/../index.html'));
+            res.sendFile(path.join(__dirname, '/../index'));
         }
     });
 
