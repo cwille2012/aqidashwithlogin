@@ -70,7 +70,7 @@ module.exports = function(app) {
         }
     });
 
-    app.post('/', function(req, res) {
+    app.post('/control', function(req, res) {
         if (req.session.user == null) {
             res.redirect('/');
         } else {
