@@ -98,7 +98,7 @@ module.exports = function(app) {
     // creating new accounts //
 
     app.get('/signup', function(req, res) {
-        res.render('signup', { title: 'Signup', countries: CT });
+        res.sendFile(path.join(__dirname, '/../register.html'));
     });
 
     app.post('/signup', function(req, res) {
@@ -194,6 +194,7 @@ module.exports = function(app) {
         });
     });
 
-    app.get('*', function(req, res) { res.render('404', { title: 'Page Not Found' }); });
+    //app.get('*', function(req, res) { res.render('404', { title: 'Page Not Found' }); });
+    app.get('*', function(req, res) { res.sendFile(path.join(__dirname, '/../login.html')); });
 
 };
