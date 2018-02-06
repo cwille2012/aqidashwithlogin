@@ -16,6 +16,7 @@ const app = express();
 app.locals.pretty = true;
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, ''));
+app.set('view engine', 'html');
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
