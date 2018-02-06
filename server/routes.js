@@ -16,7 +16,7 @@ module.exports = function(app) {
             AM.autoLogin(req.cookies.user, req.cookies.pass, function(o) {
                 if (o != null) {
                     req.session.user = o;
-                    res.sendFile(path.join(__dirname, '/../index.html'));
+                    res.redirect('/control');
                 } else {
                     res.sendFile(path.join(__dirname, '/../login.html'));
                 }
