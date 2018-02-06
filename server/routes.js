@@ -195,6 +195,6 @@ module.exports = function(app) {
     });
 
     //app.get('*', function(req, res) { res.render('404', { title: 'Page Not Found' }); });
-    app.get('*', function(req, res) { res.sendFile(path.join(__dirname, '/../login.html')); });
+    app.get('*', function(req, res) { res.sendFile(path.join(__dirname, '/../404.html')); });
 
 };
