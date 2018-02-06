@@ -62,7 +62,7 @@ module.exports = function(app) {
         } else {
             //res.sendFile(path.join(__dirname, '/../dash.html'));
             //res.redirect('/control');
-            res.sendFile(__dirname + "/../dash.html", {
+            res.sendFile(path.join(__dirname, '/../dash.html'), {
                 title: 'Data Dashboard',
                 countries: CT,
                 udata: req.session.user
