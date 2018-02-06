@@ -8,7 +8,7 @@ var session = require('express-session');
 var errorHandler = require('errorhandler');
 var cookieParser = require('cookie-parser');
 var MongoStore = require('connect-mongo')(session);
-//const server = require('./handlers.js');
+const server = require('./handlers.js');
 
 const app = express();
 
