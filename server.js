@@ -2,11 +2,19 @@
 
 const compress = require('compression');
 const express = require('express');
+var http = require('http');
 const path = require('path');
-const server = require('./handlers.js');
+var session = require('express-session');
+var errorHandler = require('errorhandler');
+var cookieParser = require('cookie-parser');
+var MongoStore = require('connect-mongo')(session);
+//const server = require('./handlers.js');
 
 const app = express();
-const port = process.env.PORT || 8080;
+
+app.locals.pretty = true;
+app.set('port', process.env.PORT || 3000);
+app.set('views', path.join(__dirname, ''));
 
 const environment = process.env.NODE_ENV;
 
